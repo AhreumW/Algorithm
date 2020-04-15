@@ -10,6 +10,14 @@ public class studygroup0414_1 {
 	//또 다른 배열을 만들거나 
 	//count변수 사용
 	
-	//내 풀이 
+	public static void main(String[] args) {
+		
+		//내 풀이 
+		
+		
+
+
+		
+	}
 	
 }
