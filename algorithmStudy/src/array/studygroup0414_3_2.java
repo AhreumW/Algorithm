@@ -2,7 +2,7 @@ package array;
 
 import java.util.Scanner;
 
-public class studygroup0414_3 {
+public class studygroup0414_3_2 {
 	public static void main(String[] args) {
 	/*
 		3번문제
@@ -18,8 +18,8 @@ public class studygroup0414_3 {
 		5번째? <enter>
 		apple black car jump
 	*/
-		
-		String[] inputStrArr = new String[10];
+		//[][] : 단어 글자수 
+		char[][] inputStrArr = new char[10][15];
 		Scanner scan = new Scanner(System.in);
 		
 		//입력
@@ -31,26 +31,31 @@ public class studygroup0414_3 {
 			if(temp.length() == 0) {
 				break;
 			}else {
-				inputStrArr[i] = temp;
+				for(int j = 0; j<15; j++) {
+					char tempC = temp.charAt(j);
+					inputStrArr[i][j] = tempC;
+				}
 			}
 		}
 		
 		
 		
-		String[] alphabetArr = new String[26];
-		//알파벳 순서대로 저장 
+		//정렬
 		for(int i =0; i<inputStrArr.length; i++) {
 			
 			if(inputStrArr[i] != null) {
 				
-				//앞 한 글자씩 비교
-				char temp = inputStrArr[i].charAt(0);
+				String[] tempStr = new String[10];
 				
-				//알파벳순서에 맞는 배열 위치에 넣어준다. 
-				for(int j=0; j<26; j++) {
-					//아스키코드 - A : 65, a : 97
-					if(temp == (char)(65+j) || temp == (char)(97+j)) {
-						alphabetArr[j] = inputStrArr[i];
+				for(int j = 0; j<15; j++) {
+					//앞 한 글자씩 비교
+					if(Character.getNumericValue(inputStrArr[i][j]) > Character.getNumericValue(inputStrArr[i+1][j])) {
+						
+						tempStr[i] = String.valueOf(inputStrArr[i]);
+						inputStrArr[i] = inputStrArr[i+1];
+						//inputStrArr[i] = Character.toString(tempStr[i]);
+						
+						break;
 					}
 				}
 			}
@@ -59,14 +64,13 @@ public class studygroup0414_3 {
 		
 		
 		//출력
-		for(int i =0; i<alphabetArr.length; i++) {
-			
-			if(alphabetArr[i] != null) {
-				System.out.print(alphabetArr[i] + " ");
-			}
-			
-		}
-		
+		/*
+		 * for(int i =0; i<alphabetArr.length; i++) {
+		 * 
+		 * if(alphabetArr[i] != null) { System.out.print(alphabetArr[i] + " "); }
+		 * 
+		 * }
+		 */
 		
 	}
 }
