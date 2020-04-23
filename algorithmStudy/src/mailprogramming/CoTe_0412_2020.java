@@ -1,6 +1,6 @@
 package mailprogramming;
 
-public class CoddingTest_0412_2020 {
+public class CoTe_0412_2020 {
 
 	public static void main(String[] args) {
 		/*	문제

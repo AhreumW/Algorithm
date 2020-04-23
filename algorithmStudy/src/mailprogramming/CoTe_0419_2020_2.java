@@ -3,7 +3,7 @@ package mailprogramming;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class CoddingTest_0419_2020_2 {
+public class CoTe_0419_2020_2 {
 
 	public static void main(String[] args) {
 		/*

@@ -2,7 +2,7 @@ package mailprogramming;
 
 import java.util.Scanner;
 
-public class CoddingTest_0419_2020_1 {
+public class CoTe_0419_2020_1 {
 
 	public static void main(String[] args) {
 		/*
