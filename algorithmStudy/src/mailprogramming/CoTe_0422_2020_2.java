@@ -1,6 +1,8 @@
 package mailprogramming;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CoTe_0422_2020_2 {
 
@@ -20,10 +22,22 @@ public class CoTe_0422_2020_2 {
 		// hashMap에  
 		// key & value  =  i & (타겟숫자 - i번재값)의 인덱스 값 
 
-
+		int target = 8;
+		int[] intArr = {2, 5, 6, 1, 10};
+		System.out.println("Input: "+intArr);
 		
+		Map<Integer, Integer> hMap = new HashMap<Integer, Integer>();
 		
-		
+		for(int i=0; i<intArr.length; i++) {
+			
+			int checkNum = target - intArr[i];
+			for(int j=0; j<intArr.length-1; j++) {
+				if(checkNum == intArr[j]) {
+					
+				}
+			}
+			
+		}
 		
 	}
 
