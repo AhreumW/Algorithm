@@ -1,3 +1,4 @@
+package mailprogramming;
 
 public class CoTe_0506_2020 {
 
@@ -13,9 +14,23 @@ public class CoTe_0506_2020 {
 //		Input: [3, 0, 3]
 //		﻿Output: [3, 3, 0]
 		
+		int[] inputArr = {0, 5, 0, 3, -1};		
+//		int[] inputArr = {3, 3, 0};		
+		
+		for(int i=0; i<inputArr.length; i++) {
+			if(inputArr[i] == 0) {
+				int temp = inputArr[i];
+				for(int j=i; j<inputArr.length-1; j++) {
+					int moveNum = inputArr[j+1];
+					inputArr[j] = moveNum;
+				}
+				inputArr[inputArr.length-1] = temp;
+			}
+		}
 				
-				
-				
+		for(int i=0; i<inputArr.length; i++) {			
+			System.out.println(inputArr[i]);
+		}
 	}
 
 }
